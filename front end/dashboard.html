@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precisely - Dashboard</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar left-sidebar">
+        <div class="sidebar-header">
+          <div class="brand-wrapper">
+            <div class="logo-small">
+              <img
+                src="./assets/Biglogo.png"
+                alt="Logo"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <span class="app-name-small">Precisely</span>
+          </div>
+        </div>
+
+        <div class="sidebar-action">
+          <button class="btn btn-primary" id="addProjectBtn">
+            <i class="fa-solid fa-plus"></i> New Project
+          </button>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="section-title">Your Projects</h3>
+          <ul class="project-list" id="projectList">
+            <div
+              style="
+                padding: 20px;
+                text-align: center;
+                font-size: 12px;
+                color: #888;
+              "
+            >
+              Loading projects...
+            </div>
+          </ul>
+        </div>
+
+        <div class="user-profile-section">
+          <div class="user-card">
+            <div class="avatar">U</div>
+            <div class="user-details">
+              <span class="name">User</span>
+              <span class="role">Member</span>
+            </div>
+
+            <a
+              href="help.html"
+              target="_blank"
+              class="action-btn"
+              title="Documentation"
+              style="margin-left: auto; margin-right: 8px"
+            >
+              <i class="fa-regular fa-circle-question"></i>
+            </a>
+
+            <button class="logout-btn" id="logoutBtn" title="Logout">
+              <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="chat-area">
+        <div class="chat-header">
+          <div class="chat-title-wrapper">
+            <h2 id="currentProjectTitle">Select a Project</h2>
+            <span
+              class="status-badge"
+              id="projectStatusBadge"
+              style="display: none"
+              >Active</span
+            >
+          </div>
+        </div>
+
+        <div
+          id="emptyState"
+          class="empty-state"
+          style="
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #6b7280;
+          "
+        >
+          <div class="empty-content">
+            <i
+              class="fa-regular fa-folder-open"
+              style="font-size: 48px; margin-bottom: 20px; color: #d1d5db"
+            ></i>
+            <h3>No Project Selected</h3>
+            <p>
+              Please create a project or select from the left sidebar to start
+              working.
+            </p>
+          </div>
+        </div>
+
+        <div
+          id="chatInterface"
+          class="chat-interface"
+          style="
+            display: none;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+          "
+        >
+          <div class="chat-history" id="chatHistory"></div>
+
+          <div class="chat-input-container">
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="chatInput"
+                placeholder="Type your requirements here..."
+                autocomplete="off"
+              />
+              <button class="send-btn" id="sendMessageBtn">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="sidebar right-sidebar">
+        <div class="tabs-container">
+          <button class="tab-btn active" data-tab="Functional">
+            Functional
+          </button>
+          <button class="tab-btn" data-tab="Non-Functional">Non-Func</button>
+          <button class="tab-btn" data-tab="Constraints">Constraints</button>
+        </div>
+
+        <div class="requirements-list-container">
+          <div id="Functional" class="req-content active">
+            <div class="list-header">
+              <h4>Functional</h4>
+              <span class="count-badge">0</span>
+            </div>
+            <div class="req-items"></div>
+          </div>
+
+          <div id="Non-Functional" class="req-content" style="display: none">
+            <div class="list-header">
+              <h4>Non-Functional</h4>
+              <span class="count-badge">0</span>
+            </div>
+            <div class="req-items"></div>
+          </div>
+
+          <div id="Constraints" class="req-content" style="display: none">
+            <div class="list-header">
+              <h4>Constraints</h4>
+              <span class="count-badge">0</span>
+            </div>
+            <div class="req-items"></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="modal-overlay hidden" id="addProjectModal">
+      <div class="card modal-card">
+        <div class="header">
+          <h2 class="app-name" style="font-size: 24px; text-align: left">
+            New Project
+          </h2>
+        </div>
+        <form id="newProjectForm">
+          <div class="form-group">
+            <label>Project Name</label>
+            <input type="text" placeholder="e.g. Finance Dashboard" required />
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <input type="text" placeholder="Short description..." />
+          </div>
+          <div style="display: flex; gap: 10px; margin-top: 20px">
+            <button type="button" class="btn back-btn" id="cancelProjectBtn">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">
+              Create Project
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

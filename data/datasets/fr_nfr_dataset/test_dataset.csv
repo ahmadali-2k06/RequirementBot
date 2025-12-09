@@ -1,0 +1,200 @@
+requirement,functional_yes_no
+"The system shall automatically trigger a database rollback sequence if the primary ledger fails to acknowledge the transaction commit within 500ms of the request initiation.",Yes
+"The application must maintain a standard response time of under 200ms for 99% of all API requests when the concurrent user load is below 10,000 users.",No
+"Upon detection of a discrepancy between the local cache and the server state, the client application shall force a full data synchronization to resolve the conflict before allowing further user input.",Yes
+"All sensitive user data, including PII and PHI, must be encrypted at rest using AES-256 standard encryption keys managed by a centralized Hardware Security Module (HSM).",No
+"The algorithmic trading module shall execute a sell order immediately if the moving average convergence divergence (MACD) indicator crosses below the signal line while the RSI is above 70.",Yes
+"The system availability must be at least 99.99% during business hours (08:00 to 18:00 EST), allowing for a maximum of 52 minutes of downtime per year.",No
+"When a user uploads a document, the system must parse the metadata to extract the author and creation date, and then index these fields in the search engine within 10 seconds.",Yes
+"The user interface must be fully navigable using only a keyboard, adhering to WCAG 2.1 Level AA accessibility standards for focus management and contrast ratios.",No
+"If the external payment gateway returns a '503 Service Unavailable' error, the system shall retry the transaction up to three times with an exponential backoff strategy before marking the payment as failed.",Yes
+"The software must be capable of recovering from a catastrophic server failure within 15 minutes (RTO) with no more than 5 minutes of data loss (RPO).",No
+"The inventory management subsystem shall automatically generate a purchase order for restocking when the quantity of a specific SKU falls below the dynamically calculated reorder point.",Yes
+"The API documentation must be automatically generated from the code annotations and exposed via a Swagger UI that is accessible only to authenticated developers.",No
+"The authentication service must support multi-factor authentication (MFA) using Time-based One-Time Passwords (TOTP) and must reject any code that has been used previously.",Yes
+"The system must support horizontal scaling to handle a 300% sudden increase in traffic volume without manual intervention or service degradation.",No
+"When a new patient record is created, the system shall cross-reference the Master Patient Index (MPI) to identify potential duplicates based on fuzzy matching of name and date of birth.",Yes
+"The mobile application binary size must not exceed 50MB to ensure downloadability over low-bandwidth cellular networks in emerging markets.",No
+"The workflow engine must allow administrators to define custom approval chains where a request is routed to a specific manager based on the department code and total expense amount.",Yes
+"All system logs must be retained for a minimum of seven years in an immutable WORM (Write Once, Read Many) storage format to comply with Sarbanes-Oxley regulations.",No
+"The recommendation engine shall filter out any products that the user has previously purchased or explicitly marked as 'not interested' within the last 30 days.",Yes
+"The codebase must maintain a test coverage of at least 85% across all modules, and the CI/CD pipeline must block any deployment that lowers this metric.",No
+"If the temperature sensor reports a value exceeding 80°C, the embedded controller must immediately shut down the heating element and activate the cooling fan.",Yes
+"The system architecture must be modular, ensuring that the replacement of the database layer does not require changes to the business logic layer code.",No
+"The search functionality shall support Boolean operators (AND, OR, NOT) and wildcards to allow users to construct complex queries against the document repository.",Yes
+"The application must support the concurrent processing of 5,000 video streams at 1080p resolution without introducing jitter exceeding 30ms.",No
+"Upon receiving a 'Delete Account' request, the system must anonymize all personal data in the relational database and issue a deletion command to the analytics data lake.",Yes
+"The password policy must enforce a minimum length of 12 characters, requiring a mix of uppercase, lowercase, numbers, and special symbols, and must reject common dictionary words.",No
+"The notification service shall aggregate multiple alerts of the same type occurring within a 5-minute window into a single summary email to prevent user fatigue.",Yes
+"The system must be compatible with the last three major versions of Chrome, Firefox, Safari, and Edge browsers on both desktop and mobile viewports.",No
+"When a user attempts to access a restricted resource, the authorization middleware must verify that the user possesses the specific 'read:admin' scope in their JWT.",Yes
+"The disaster recovery site must be geographically separated from the primary data center by at least 500 kilometers to mitigate regional risks.",No
+"The reporting module shall allow users to schedule recurring exports of dashboard data to PDF format, to be delivered via email on the first Monday of every month.",Yes
+"The application must handle input validation on both the client and server sides to prevent SQL injection and Cross-Site Scripting (XSS) attacks.",No
+"If the vehicle's speed exceeds the recognized speed limit by 10%, the onboard telematics unit must log an 'Over-Speed' event and transmit it to the fleet management server.",Yes
+"The system must provide localized user interfaces for English, Spanish, French, and German, automatically selecting the language based on the user's browser settings.",No
+"The chatbot must identify the user's intent from natural language input and route the conversation to a human agent if the sentiment analysis score is negative (< -0.5).",Yes
+"The database schema must be normalized to Third Normal Form (3NF) to reduce data redundancy, except for specific read-heavy tables used for analytics.",No
+"The scheduling algorithm shall automatically assign shifts to employees while respecting their availability constraints and ensuring no employee works more than 40 hours a week.",Yes
+"The system must support a peak throughput of 50,000 transactions per second during the Black Friday sales event without error rates exceeding 0.1%.",No
+"When the stock price drops by 5% within a 1-hour window, the system shall trigger a 'Stop-Loss' notification to all subscribed users via Push Notification.",Yes
+"The API must implement rate limiting based on the user's subscription tier, allowing 100 requests/minute for 'Free' users and 1000 requests/minute for 'Pro' users.",No
+"The content management system shall allow editors to restore previous versions of a page content from a history log maintained for the last 50 revisions.",Yes
+"The application must ensure data consistency across distributed nodes using a quorum-based consensus algorithm like Raft or Paxos.",No
+"If the biometric scanner fails to identify the user after three attempts, the system shall disable biometric login and require the master password.",Yes
+"The software must not depend on any proprietary libraries that would restrict its distribution under the MIT open-source license.",No
+"The payroll system shall calculate overtime pay at 1.5x the standard rate for any hours worked beyond 8 hours in a single day, accounting for public holidays.",Yes
+"The Docker container startup time must be less than 2 seconds to ensure rapid autoscaling during traffic spikes.",No
+"When a shipment is marked as 'Delivered' by the carrier API, the system must update the order status to 'Completed' and trigger a request for user feedback.",Yes
+"The system must undergo a third-party penetration test annually, and all critical vulnerabilities (CVSS > 7.0) must be remediated within 7 days.",No
+"The analytics engine shall calculate the Customer Lifetime Value (CLV) in real-time by aggregating transaction history, support costs, and engagement metrics.",Yes
+"The application logs must not contain any sensitive information such as passwords, credit card numbers, or API keys, even in debug mode.",No
+"The machine learning pipeline must automatically trigger a model retraining sequence if the concept drift metric exceeds the threshold of 0.05 for three consecutive evaluation windows.",Yes
+"The system must ensure that the Time to First Byte (TTFB) is less than 200ms for 95% of users accessing the content delivery network from North America.",No
+"When a recurring subscription payment fails, the billing system shall automatically retry the charge on days 3, 7, and 14 before suspending the user account and sending a termination email.",Yes
+"The user interface must support dynamic font scaling up to 200% without breaking the layout or overlapping text containers, ensuring compliance with accessibility standards.",No
+"If the warehouse robot encounters an obstacle within 0.5 meters, it must halt movement immediately, calculate a new path using the A* algorithm, and emit a warning signal.",Yes
+"The application executable code must be signed with a valid Code Signing Certificate to prevent operating system security warnings during installation.",No
+"The fraud detection engine shall flag any user account that accesses the platform from three different countries within a 6-hour window.",Yes
+"The database backups must be encrypted using 4096-bit RSA keys and stored in an immutable S3 Object Lock bucket for a retention period of 365 days.",No
+"Upon receipt of a 'force_logout' socket event, the client application must clear all local storage tokens and redirect the user to the login screen within 500ms.",Yes
+"The system must support a concurrent connection limit of 100,000 WebSockets per server node while maintaining a CPU usage below 70%.",No
+"The payroll module shall automatically deduct the appropriate federal and state taxes based on the employee's w4 form configuration and current tax bracket tables.",Yes
+"The API must implement versioning via the URL path (e.g., /v1/, /v2/) and maintain support for the previous version for at least 12 months after a deprecation notice.",No
+"When a user scans a QR code, the mobile app must validate the embedded token signature against the public key before displaying the associated augmented reality content.",Yes
+"The log aggregation service must ingest up to 1GB of log data per minute with a maximum ingestion latency of 5 seconds.",No
+"If the external weather API is unreachable, the irrigation control system shall default to the 'standard watering schedule' stored in its local non-volatile memory.",Yes
+"The software must compile and run on both x86_64 and ARM64 architectures without conditional compilation flags in the business logic modules.",No
+"The chat application shall implement end-to-end encryption using the Signal Protocol, ensuring that message content is undecipherable by the server.",Yes
+"The recovery time from a complete cluster failure must not exceed 10 minutes, assuming the availability of a warm standby environment.",No
+"When a stock SKU is marked as 'obsolete', the system must prevent new purchase orders for that item but allow sales of existing inventory until depletion.",Yes
+"The web application must score at least 90/100 on Google Lighthouse performance audits for both mobile and desktop categories.",No
+"The system shall generate a unique, collision-resistant UUIDv4 for every new transaction record inserted into the ledger.",Yes
+"The microservices architecture must ensure that no single service has a cyclomatic complexity greater than 15 to facilitate maintainability.",No
+"If the user's credit score is below 600, the loan origination system must automatically route the application to the 'High Risk' manual review queue.",Yes
+"The platform must support Single Sign-On (SSO) integration with Okta, Azure AD, and Google Workspace using the SAML 2.0 standard.",No
+"The video transcoding service shall automatically convert uploaded raw files into H.264, H.265, and VP9 formats at multiple bitrates.",Yes
+"The application memory footprint must not exceed 512MB on the client device to prevent background process termination by the OS.",No
+"When the vehicle battery level drops below 15%, the onboard computer must automatically switch to 'Eco Mode', limiting top speed to 60mph and reducing AC output.",Yes
+"The system documentation must include a comprehensive Entity Relationship Diagram (ERD) and API reference updated automatically via CI/CD pipelines.",No
+"The leaderboard service shall update user rankings in real-time using a Redis sorted set, ensuring the top 100 players are accurate within 1 second of a score change.",Yes
+"The mobile application must request the minimum necessary permissions and must not crash if the user denies access to the camera or microphone.",No
+"If a transaction involves a currency conversion, the system must fetch the real-time exchange rate from the forex provider and apply a configurable spread margin.",Yes
+"The solution must be compliant with HIPAA regulations regarding the storage and transmission of Protected Health Information (PHI).",No
+"The email dispatch service shall throttle outgoing messages to 50 per second per domain to avoid being blacklisted by spam filters.",Yes
+"The application must maintain a crash-free session rate of 99.9% across all supported Android devices.",No
+"When a pull request is merged into the 'main' branch, the CI pipeline must automatically deploy the artifact to the staging environment and run integration tests.",Yes
+"The user password database must use a slow hashing algorithm like Argon2 or Bcrypt with a work factor of at least 10 to resist brute-force attacks.",No
+"The flight booking engine shall lock the selected seat for 10 minutes during the checkout process and release it if payment is not confirmed.",Yes
+"The system must provide an audit trail of all administrative actions, including the IP address, timestamp, and specific changes made to the configuration.",No
+"If the IoT sensor reports data outside the defined safety range, the edge gateway must trigger a local alarm even if internet connectivity is lost.",Yes
+"The application must be localized for the Japanese market, including correct date formatting (YYYY-MM-DD) and support for Kanji characters.",No
+"The search engine shall support fuzzy string matching to return relevant results even if the user makes a typo (e.g., 'iphne' -> 'iphone').",Yes
+"The REST API response payload must be compressed using GZIP if the client request header includes 'Accept-Encoding: gzip'.",No
+"When a user blocks another user, the system must prevent any future direct messages, profile views, or notifications between the two accounts.",Yes
+"The software update mechanism must verify the checksum of the downloaded package before initiating the installation process.",No
+"The smart thermostat shall learn the user's temperature preferences over a 7-day period and automatically generate a schedule to optimize energy usage.",Yes
+"The system must comply with the 'Right to be Forgotten' (GDPR), allowing users to permanently delete all their data within 30 days of a request.",No
+"If the user selects 'Express Shipping', the system must verify that the delivery address is within the serviceable zones for overnight carriers.",Yes
+"The code must adhere to the PEP 8 style guide for Python, enforced by the 'flake8' linter during the build process.",No
+"The inventory system shall trigger a webhook notification to the supplier's ERP system whenever a bulk order exceeds 500 units.",Yes
+"The application loading animation must not last longer than 3 seconds before displaying the first interactive element (First Contentful Paint).",No
+"The system must utilize an optimistic locking mechanism to prevent data overwrite collisions during simultaneous multi-user edits on the same document record.",yes
+"The API response time for the main dashboard load must remain under 200ms for the 95th percentile of requests up to a load of 10,000 concurrent users.",no
+"The payment gateway must automatically retry failed transactions exactly three times using an exponential backoff strategy before marking the transaction as failed.",yes
+"All data at rest within the database must be encrypted using AES-256 standards with rotating keys managed by a hardware security module (HSM).",no
+"The recommendation engine must dynamically re-rank product suggestions based on the user's clickstream data from the current session within 500ms.",yes
+"The system shall comply with WCAG 2.1 Level AA standards to ensure accessibility for users utilizing screen readers and assistive technologies.",no
+"Upon detecting a suspicious login attempt from a new IP address, the system must trigger a multi-factor authentication challenge and log the event in the security audit trail.",yes
+"The application architecture must be loosely coupled to ensure that a critical failure in the reporting microservice does not impact the availability of the checkout process.",no
+"The system must support the ingestion of 1 million IoT sensor data points per minute without data loss or significant latency spikes.",no
+"The reporting module must allow users to define custom SQL-like queries through a visual builder to generate ad-hoc reports on historical data.",yes
+"Recovery Point Objective (RPO) must be less than 5 minutes requiring continuous transaction log shipping to the disaster recovery site.",no
+"The AI model must achieve a minimum F1-score of 0.85 when classifying customer sentiment from unstructured support ticket text.",no
+"The inventory system must trigger an automatic purchase order via EDI when stock levels for any SKU fall below the dynamic reorder point calculated by the demand forecasting algorithm.",yes
+"The mobile application binary size must not exceed 50MB to ensure downloadability over low-bandwidth cellular networks in target emerging markets.",no
+"The system must maintain an audit log of every change made to patient health records including the timestamp user ID old value and new value.",yes
+"The platform must support multi-tenancy where each tenant's data is logically isolated and invisible to other tenants sharing the same database infrastructure.",no
+"Users must be able to configure cascading delete rules to ensure referential integrity when removing parent entities with associated child records.",yes
+"The CI/CD pipeline must automatically reject any build that decreases code coverage below the 80% threshold.",no
+"The search algorithm must support fuzzy matching and phonetic analysis to return relevant results even when search terms contain typographical errors.",yes
+"The system must allow administrators to impersonate a user session for debugging purposes without requiring the user's password while logging the impersonation event.",yes
+"The codebase must strictly adhere to the PEP 8 style guide for Python code to ensure maintainability and readability across the development team.",no
+"The application must automatically purge temporary session data and cache files older than 24 hours to prevent storage bloat.",yes
+"The video streaming service must dynamically adjust the bitrate (ABR) based on the user's available bandwidth to prevent buffering during playback.",yes
+"The system must support internationalization (i18n) enabling the UI to render dates currencies and text direction (RTL) based on the user's locale.",no
+"When a user uploads a file, the system must asynchronously process the file for virus scanning and metadata extraction before making it available for download.",yes
+"The database schema must be normalized to Third Normal Form (3NF) to reduce data redundancy, except for specific read-heavy reporting tables.",no
+"The system must implement a rate-limiting algorithm that restricts API consumers to 100 requests per minute per API key.",yes
+"The User Interface must remain responsive and functional across all viewports ranging from 320px mobile screens to 4k desktop monitors.",no
+"The system must integrate with the HRIS via LDAP to automatically provision and de-provision user accounts based on employment status updates.",yes
+"The neural network inference time on the edge device must not exceed 100ms to ensure real-time object detection in the video feed.",no
+"The scheduler must account for timezone differences and daylight saving time transitions when processing recurring calendar events across global regions.",yes
+"The application must survive a complete Availability Zone failure in AWS without manual intervention and with zero downtime.",no
+"The shopping cart must persist items for 30 days across different devices if the user is logged in even if the session expires.",yes
+"The system must validate all inputs against a strict allowlist of characters to prevent SQL injection and Cross-Site Scripting (XSS) attacks.",yes
+"Legacy data migration scripts must verify data integrity by comparing hash sums of the source and destination records after transfer.",yes
+"The application startup time after a cold reboot must be less than 15 seconds including database connection establishment.",no
+"The workflow engine must allow users to define conditional branching logic where the next step depends on the value of a specific form field.",yes
+"All third-party library dependencies must be scanned for known vulnerabilities (CVEs) during the build process and block deployment if critical issues are found.",no
+"The system must provide a sandbox environment that mirrors the production environment configuration for safe testing of API integrations.",no
+"The chat module must use WebSockets to deliver messages in real-time and provide read receipts when the recipient views the message.",yes
+"The software must be compatible with Docker containers to facilitate orchestration via Kubernetes in a cloud-agnostic environment.",no
+"The system must automatically generate a PDF invoice containing the tax breakdown and company branding immediately after payment confirmation.",yes
+"Password policies must enforce a minimum complexity requiring at least one uppercase letter one number and one special character.",yes
+"The application must handle the 'Thundering Herd' problem by adding random jitter to the reconnection attempts of disconnected clients.",no
+"The geospatial module must calculate the shortest driving route between two coordinates considering real-time traffic data and road closures.",yes
+"The system must ensure eventual consistency across distributed nodes within a maximum of 2 seconds for non-critical data updates.",no
+"Users must be able to roll back to any previous version of a document within the last 90 days preserving all metadata.",yes
+"The application must use OAuth 2.0 / OpenID Connect for delegating authorization to external identity providers like Google or Azure AD.",yes
+"The batch processing job must process 50,000 records within a 2-hour maintenance window during off-peak hours.",no
+"The system must allow users to define custom webhook endpoints to receive JSON payloads whenever a specific trigger event occurs.",yes
+System must automatically scale resources during peak loads to maintain response time under 2 seconds,No
+System must encrypt all sensitive data at rest using AES-256 encryption,No
+System must validate user identities using multi-factor authentication before granting access,Yes
+System must maintain 99.99% uptime availability throughout the year,No
+System must detect and block suspicious login attempts using anomaly-based detection,Yes
+System must process up to 50,000 concurrent user requests without performance degradation,No
+System must provide complete transactional logs for all user operations,Yes
+System must recover from critical failures within 5 minutes using automated failover mechanisms,No
+System must ensure that data synchronization across distributed servers happens within 3 seconds,No
+System must support real-time notifications with delivery success above 98%,Yes
+System must comply with GDPR regulations for user privacy and data handling,No
+System must restrict access based on role-based authorization policies,Yes
+System must ensure API response consistency even under heavy load using load balancing,No
+System must back up all database records every hour and maintain 30-day retention,No
+System must sanitize all user input to prevent SQL injection attacks,Yes
+System must automatically patch security vulnerabilities detected by the monitoring system,No
+System must support real-time analytics with latency less than 1 second,Yes
+System must maintain audit trails that cannot be deleted or modified by unauthorized users,No
+System must validate all file uploads and scan them for malware,Yes
+System must provide automatic language translation for all UI text in real time,Yes
+System must ensure zero data loss during unexpected server shutdowns,No
+System must allow secure integration with third-party services using OAuth 2.0,Yes
+System must enforce session expiration after 15 minutes of inactivity,Yes
+System must render all UI components within 1 second on modern browsers,No
+System must maintain consistent data versions across microservices using event sourcing,No
+System must throttle API usage for abusive clients to ensure fair availability,Yes
+System must monitor system health metrics and generate alerts within 10 seconds of anomaly detection,No
+System must allow administrators to override automated decisions with proper authorization,Yes
+System must ensure horizontal scaling of microservices without downtime,No
+System must verify data integrity using checksum validation during every transfer,No
+System must support real-time collaboration where changes are visible to all users instantly,Yes
+System must log all failed login attempts and notify admins if attempts exceed threshold,Yes
+System must compress large static assets to reduce load time by 40%,No
+System must ensure that all communication between services is secured with TLS 1.3,No
+System must provide offline mode and automatically sync data when connectivity restores,Yes
+System must ensure predictable system behavior even under distributed network splits,No
+System must anonymize user data when exporting datasets for analytics,No
+System must generate detailed performance reports every 24 hours,No
+System must support continuous deployment with zero downtime releases,No
+System must allow dynamic configuration updates without restarting services,Yes
+System must ensure each microservice can restart independently without affecting others,No
+System must detect fraudulent activities using machine learning-based models,Yes
+System must process payments with end-to-end encryption and PCI-DSS compliance,Yes
+System must restore previous system state during rollback operations within 2 minutes,No
+System must prevent brute-force attacks by automatically locking accounts after 5 failed attempts,Yes
+System must ensure consistent UI appearance across all devices and screen sizes,No
+System must maintain response time below 200 ms for internal service-to-service calls,No
+System must allow administrators to access system logs securely via dashboard,Yes
+System must limit data access to only regions approved by data residency policies,No

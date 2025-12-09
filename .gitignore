@@ -1,0 +1,5 @@
+/models
+backendExpress/.env
+backendExpress/node_modules/
+.vscode
+/src/__pycache__

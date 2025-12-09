@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precisely - Legal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary-blue: #2563eb;
+        --dark-blue: #1e40af;
+        --light-blue: #eff6ff;
+        --teal: #14b8a6;
+        --dark-teal: #0d9488;
+        --light-teal: #ccfbf1;
+        --dark-gray: #1f2937;
+        --medium-gray: #6b7280;
+        --light-gray: #f3f4f6;
+        --border-gray: #e5e7eb;
+        --white: #ffffff;
+        --success-green: #10b981;
+        --error-red: #ef4444;
+        --warning-orange: #f59e0b;
+      }
+      
+      body {
+        background-color: var(--light-gray);
+        font-family: "Inter", sans-serif;
+        color: var(--dark-gray);
+      }
+
+      .legal-container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .legal-card {
+        background: var(--white);
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--border-gray);
+        overflow-y: hidden;
+      }
+
+      /* Header Area */
+      .legal-header {
+        padding: 40px 40px 20px 40px;
+        text-align: center;
+        border-bottom: 1px solid var(--border-gray);
+      }
+
+      .app-logo {
+        font-size: 32px;
+        color: var(--primary-blue);
+        margin-bottom: 10px;
+      }
+
+      .legal-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .legal-subtitle {
+        color: var(--medium-gray);
+        font-size: 14px;
+      }
+
+      /* Tab Navigation */
+      .legal-tabs {
+        display: flex;
+        background: var(--light-blue);
+        padding: 0 20px;
+      }
+
+      .legal-tab {
+        padding: 15px 25px;
+        cursor: pointer;
+        font-weight: 600;
+        color: var(--medium-gray);
+        border-bottom: 3px solid transparent;
+        transition: all 0.2s;
+        font-size: 14px;
+      }
+
+      .legal-tab:hover {
+        color: var(--primary-blue);
+      }
+
+      .legal-tab.active {
+        color: var(--primary-blue);
+        border-bottom: 3px solid var(--primary-blue);
+      }
+
+      /* Content Area */
+      .legal-content {
+        padding: 40px;
+        display: none; /* Hidden by default */
+        animation: fadeIn 0.3s ease-in-out;
+      }
+
+      .legal-content.active {
+        display: block;
+      }
+
+      /* Typography */
+      h2 {
+        font-size: 18px;
+        color: var(--dark-blue);
+        margin-top: 25px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      h2:first-of-type {
+        margin-top: 0;
+      }
+
+      p,
+      ul {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #4b5563;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      /* Footer / Back Button */
+      .legal-footer {
+        padding: 20px 40px;
+        background: #fafafa;
+        border-top: 1px solid var(--border-gray);
+        text-align: center;
+      }
+
+      .btn-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: var(--medium-gray);
+        font-weight: 600;
+        font-size: 14px;
+        transition: color 0.2s;
+      }
+
+      .btn-back:hover {
+        color: var(--primary-blue);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(5px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="legal-container">
+      <div class="legal-card">
+        <div class="legal-header">
+          <div class="app-logo">
+            <i class="fa-solid fa-scale-balanced"></i>
+          </div>
+          <h1 class="legal-title">Legal Information</h1>
+          <p class="legal-subtitle">Effective Date: December 8, 2025</p>
+        </div>
+
+        <div class="legal-tabs">
+          <div class="legal-tab active" onclick="switchTab('tos')">
+            Terms of Service
+          </div>
+          <div class="legal-tab" onclick="switchTab('privacy')">
+            Privacy Policy
+          </div>
+        </div>
+
+        <div id="tos" class="legal-content active">
+          <h2>
+            <i class="fa-solid fa-file-contract"></i> 1. Acceptance of Terms
+          </h2>
+          <p>
+            By accessing and using the <strong>Precisely</strong> Requirement
+            Engineering Tool ("the Service"), you accept and agree to be bound
+            by the terms and provision of this agreement. If you do not agree to
+            abide by these terms, please do not use this Service.
+          </p>
+
+          <h2><i class="fa-solid fa-robot"></i> 2. AI Usage & Accuracy</h2>
+          <p>
+            This Service utilizes Artificial Intelligence (AI) models (including
+            DeBERTa and T5) to analyze, classify, and rewrite software
+            requirements.
+          </p>
+          <ul>
+            <li>
+              <strong>No Guarantee:</strong> While we strive for high accuracy,
+              the AI may occasionally produce incorrect classifications or
+              ambiguous corrections.
+            </li>
+            <li>
+              <strong>User Responsibility:</strong> You are responsible for
+              reviewing and verifying all requirements generated or processed by
+              the bot before using them in production development.
+            </li>
+          </ul>
+
+          <h2><i class="fa-solid fa-fingerprint"></i> 3. User Obligations</h2>
+          <p>You agree not to use the Service to:</p>
+          <ul>
+            <li>
+              Input sensitive Personal Identifiable Information (PII) or
+              confidential trade secrets.
+            </li>
+            <li>
+              Generate requirements for malicious software or illegal
+              activities.
+            </li>
+            <li>Attempt to reverse engineer the AI models or backend API.</li>
+          </ul>
+
+          <h2>
+            <i class="fa-solid fa-copyright"></i> 4. Intellectual Property
+          </h2>
+          <p>
+            The requirement specifications, reports, and scope definitions
+            generated by you using the Service belong to you. The underlying
+            software, AI models, and interface design remain the property of
+            Precisely.
+          </p>
+        </div>
+
+        <div id="privacy" class="legal-content">
+          <h2>
+            <i class="fa-solid fa-shield-halved"></i> 1. Information We Collect
+          </h2>
+          <p>We collect information to provide and improve our AI services:</p>
+          <ul>
+            <li>
+              <strong>Project Data:</strong> Scope definitions, requirement
+              text, and constraints you input.
+            </li>
+            <li>
+              <strong>Usage Data:</strong> Interaction logs (e.g., commands
+              used, error rates) to debug and optimize model performance.
+            </li>
+          </ul>
+
+          <h2><i class="fa-solid fa-server"></i> 2. How We Use Your Data</h2>
+          <p>Your data is used strictly for:</p>
+          <ul>
+            <li>
+              Processing your specific request (Intent classification, Ambiguity
+              detection).
+            </li>
+            <li>Generating the final HTML reports.</li>
+            <li>Session persistence (Saving your project state locally).</li>
+          </ul>
+          <p><strong>We do NOT sell your data to third parties.</strong></p>
+
+          <h2><i class="fa-solid fa-lock"></i> 3. Data Security</h2>
+          <p>
+            We implement standard security measures to protect your inputs.
+            However, as this is a local/demo environment, data is stored in
+            local JSON files (`data/projects.json`). Ensure your host machine is
+            secure.
+          </p>
+
+          <h2><i class="fa-solid fa-user-check"></i> 4. Your Rights</h2>
+          <p>
+            You have the right to delete your project data at any time using the
+            delete buttons within the dashboard or by manually clearing the
+            application data.
+          </p>
+        </div>
+
+        <div class="legal-footer">
+          <a href="login.html" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Back to Login
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function switchTab(tabId) {
+        // 1. Remove active class from all tabs
+        document.querySelectorAll(".legal-tab").forEach((tab) => {
+          tab.classList.remove("active");
+        });
+
+        // 2. Hide all content sections
+        document.querySelectorAll(".legal-content").forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        // 3. Activate clicked tab (visual)
+        event.target.classList.add("active");
+
+        // 4. Show corresponding content
+        document.getElementById(tabId).classList.add("active");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precisely - User Manual</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="help.css" />
+  </head>
+  <body>
+    <div class="help-container">
+      <div class="help-card">
+        
+        <h1 class="help-title">
+          <i class="fa-solid fa-book-open" style="color: var(--primary-blue)"></i>
+          Precisely: Comprehensive User Guide
+        </h1>
+
+        <p class="help-p" style="font-size: 16px; margin-bottom: 40px;">
+          Welcome to <strong>Precisely</strong>, your AI-powered Requirement Engineering assistant. 
+          This guide covers fundamental Software Engineering concepts, how to navigate the dashboard, 
+          and the step-by-step workflow to generate professional specifications.
+        </p>
+
+        <div class="help-section">
+          <h2 class="help-h2">
+            <i class="fa-solid fa-graduation-cap" style="color: var(--teal)"></i>
+            1. Core Concepts: Understanding Requirements
+          </h2>
+          <p class="help-p">
+            Before using the bot, it is essential to understand the three main categories of software requirements. 
+            Precisely automatically classifies your input into these buckets.
+          </p>
+
+          <table class="help-table">
+            <thead>
+              <tr>
+                <th width="20%">Category</th>
+                <th width="45%">Definition</th>
+                <th>Real-World Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="badge-example badge-fr">Functional (FR)</span>
+                </td>
+                <td>
+                  <strong>"What the system DOES."</strong><br>
+                  Describes a specific behavior, function, or calculation the system must perform. If this is missing, the system is incomplete.
+                </td>
+                <td>
+                  • "The system shall calculate tax."<br>
+                  • "Users shall log in via Email."<br>
+                  • "The app shall send notifications."
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="badge-example badge-nfr">Non-Functional (NFR)</span>
+                </td>
+                <td>
+                  <strong>"How the system BEHAVES."</strong><br>
+                  Describes quality attributes such as Performance, Security, Reliability, and Usability.
+                </td>
+                <td>
+                  • "The system shall load in < 2 seconds."<br>
+                  • "Data must be encrypted (AES-256)."<br>
+                  • "The interface should be user-friendly."
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="badge-example" style="background: #fef3c7; color: #b45309">Constraint</span>
+                </td>
+                <td>
+                  <strong>"The LIMITATIONS."</strong><br>
+                  Technical or business restrictions that limit design choices. These are usually non-negotiable.
+                </td>
+                <td>
+                  • "Must run on Linux servers."<br>
+                  • "Development budget is $50k."<br>
+                  • "Must comply with GDPR."
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="help-section">
+          <h2 class="help-h2">
+            <i class="fa-solid fa-columns" style="color: var(--dark-blue)"></i>
+            2. Navigating the Dashboard
+          </h2>
+          <p class="help-p">
+            The Precisely interface is divided into three functional zones designed to keep you organized.
+          </p>
+          
+          <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 15px;">
+                    <strong>👈 Left Sidebar (Project Management):</strong> 
+                    Create new projects here using the <code>+ New Project</code> button. Your history is saved automatically. Click any project to switch contexts instantly.
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>💬 Center Panel (The AI Chat):</strong> 
+                    This is your workspace. Here you interact with the bot, define the scope via the Wizard, and input requirements. The input box only appears once a project is active.
+                </li>
+                <li>
+                    <strong>👉 Right Sidebar (Live Requirements):</strong> 
+                    This is a <strong>real-time view</strong> of your specification document. 
+                    <ul>
+                        <li style="margin-top:5px; font-size: 13px; color: #666;">• Click <strong>Functional</strong> to see logic requirements.</li>
+                        <li style="margin-top:5px; font-size: 13px; color: #666;">• Click <strong>Non-Func</strong> to see performance/quality requirements.</li>
+                        <li style="margin-top:5px; font-size: 13px; color: #666;">• Click <strong>Constraints</strong> to see the limitations defined during the Scope Wizard.</li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="help-section">
+          <h2 class="help-h2">
+            <i class="fa-solid fa-list-check" style="color: var(--primary-blue)"></i>
+            3. The Precisely Workflow
+          </h2>
+          <p class="help-p">
+            Follow this structured process to generate a complete Software Requirement Specification (SRS).
+          </p>
+
+          <table class="help-table">
+            <thead>
+              <tr>
+                <th width="5%">Step</th>
+                <th width="20%">Action</th>
+                <th>Detailed Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td><strong>Create Project</strong></td>
+                <td>
+                  Click the <strong>New Project</strong> button. Enter a name (e.g., "Hospital Management System") and a short description. This creates a new container for your data.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td><strong>Define Scope (Wizard)</strong></td>
+                <td>
+                  The bot will automatically trigger the <strong>Scope Wizard</strong>. It will ask you 6-7 questions to understand the context.
+                  <br><em>You will define: Primary Users, Key Features, Exclusions, and Technical Constraints.</em>
+                  <br><strong>Note:</strong> Constraints entered here (e.g., "Must use Python") are automatically split and added to the Right Sidebar under the "Constraints" tab.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>3</strong></td>
+                <td><strong>Gather Requirements</strong></td>
+                <td>
+                  Once the scope is set, type your requirements into the chat input. 
+                  <br>Example: <em>"The system shall generate a monthly PDF report."</em>
+                  <br><br>
+                  <strong>The AI will immediately:</strong>
+                  <ul>
+                    <li>Classify it as Functional or Non-Functional.</li>
+                    <li>Check for ambiguity (e.g., "Is 'fast' specific enough?").</li>
+                    <li>Verify it aligns with the defined Scope.</li>
+                  </ul>
+                  If valid, it appears in the Chat AND the Right Sidebar.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>4</strong></td>
+                <td><strong>Generate Report</strong></td>
+                <td>
+                  When you are finished, type the command <span class="code-tag">exit</span> in the chat.
+                  <br>
+                  The system will compile a <strong>Final HTML Report</strong> inside the chat window. This report includes:
+                  <ul>
+                    <li>Project Scope & Constraints</li>
+                    <li>Summary Statistics (High/Medium/Low priority counts)</li>
+                    <li>The full, formatted list of requirements</li>
+                  </ul>
+                  <em>The chat input will be disabled to indicate the session is closed.</em>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="help-section">
+          <h2 class="help-h2">
+            <i class="fa-solid fa-terminal" style="color: var(--medium-gray)"></i>
+            4. Chat Commands
+          </h2>
+          <p class="help-p">
+            You can control the bot using these specific keywords during the gathering phase.
+          </p>
+          <table class="help-table">
+            <thead>
+              <tr>
+                <th width="15%">Command</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="code-tag">scope</span></td>
+                <td>Prints the current project boundaries (Users, Features, Exclusions) to the chat. Helpful if you forget what is out of scope.</td>
+              </tr>
+              <tr>
+                <td><span class="code-tag">checklist</span></td>
+                <td>Displays the "Requirement Quality Checklist" to remind you of best practices (SMART criteria).</td>
+              </tr>
+              <tr>
+                <td><span class="code-tag">summary</span></td>
+                <td>Shows a real-time statistical breakdown (e.g., "Total: 15 | High Priority: 5 | Functional: 10").</td>
+              </tr>
+              <tr>
+                <td><span class="code-tag">exit</span></td>
+                <td><strong>Generates the Final Report</strong> and ends the current session.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="help-section">
+          <h2 class="help-h2">
+            <i class="fa-solid fa-check-double" style="color: var(--warning-orange)"></i>
+            5. The SMART Criteria
+          </h2>
+          <p class="help-p">
+            The AI Ambiguity Detector is trained to ensure your requirements meet these five standards.
+          </p>
+          <ul style="line-height: 1.8; color: #4b5563;">
+            <li><strong>S - Specific:</strong> Clear and unambiguous. (<em>Bad: "Make it fast"</em> vs <em>Good: "Load in 2s"</em>)</li>
+            <li><strong>M - Measurable:</strong> Can be tested with a Pass/Fail criterion.</li>
+            <li><strong>A - Achievable:</strong> Realistic within technical constraints.</li>
+            <li><strong>R - Relevant:</strong> Aligns with the business goals defined in the Scope.</li>
+            <li><strong>T - Testable:</strong> A QA engineer can write a test case for it.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

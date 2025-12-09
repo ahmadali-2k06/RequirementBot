@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <title>Precisely - Login & Signup</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <!-- Header -->
+        <div class="header">
+          <div class="logo-container">
+            <div class="logo">
+              <img
+                src="./assets/shortcut_icon.png"
+                alt="Precisely Logo"
+                id="appLogo"
+              />
+            </div>
+          </div>
+          <h1 class="app-name">Precisely</h1>
+          <p class="subtitle">Intelligent Requirement Gathering</p>
+        </div>
+
+        <!-- Message Alerts -->
+        <div class="message success" id="successMessage"></div>
+        <div class="message error" id="errorMessage"></div>
+
+        <!-- Login Form -->
+        <div class="form-container active" id="loginForm">
+          <form id="loginFormElement">
+            <div class="form-group">
+              <label for="loginEmail">Email Address</label>
+              <input
+                type="email"
+                id="loginEmail"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="loginBtn">
+              <span>Login</span>
+            </button>
+          </form>
+
+          <div class="footer-text">
+            Don't have an account?
+            <a href="#" onclick="toggleForm(); return false;">Sign Up</a>
+          </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form-container" id="signupForm">
+          <form id="signupFormElement">
+            <div class="form-group">
+              <label for="signupName">Full Name</label>
+              <input
+                type="text"
+                id="signupName"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="signupEmail">Email Address</label>
+              <input
+                type="email"
+                id="signupEmail"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="signupPassword">Password</label>
+              <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create a password"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="signupOrganization">Organization (Optional)</label>
+              <input
+                type="text"
+                id="signupOrganization"
+                placeholder="Your organization name"
+              />
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="agreeTerms" required />
+              <label for="agreeTerms">
+                I agree to the
+                <a href="legal.html" target="_blank" class="legal-link"
+                  >Terms of Service & Privacy Policy</a
+                >
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="signupBtn">
+              <span>Create Account</span>
+            </button>
+          </form>
+
+          <div class="footer-text">
+            Already have an account?
+            <a href="#" onclick="toggleForm(); return false;">Login</a>
+          </div>
+        </div>
+
+        <!-- OTP Verification Form -->
+        <div class="form-container" id="otpForm">
+          <div>
+            <p class="otp-email">
+              We sent a 4-digit code to <strong id="otpEmail"></strong>
+            </p>
+
+            <label class="otp-label">Enter OTP Code</label>
+            <div class="otp-container">
+              <input
+                type="text"
+                class="otp-input"
+                id="otp1"
+                inputmode="numeric"
+                maxlength="1"
+                placeholder="•"
+              />
+              <input
+                type="text"
+                class="otp-input"
+                id="otp2"
+                inputmode="numeric"
+                maxlength="1"
+                placeholder="•"
+              />
+              <input
+                type="text"
+                class="otp-input"
+                id="otp3"
+                inputmode="numeric"
+                maxlength="1"
+                placeholder="•"
+              />
+              <input
+                type="text"
+                class="otp-input"
+                id="otp4"
+                inputmode="numeric"
+                maxlength="1"
+                placeholder="•"
+              />
+            </div>
+
+            <button type="button" class="btn btn-primary" id="verifyOtpBtn">
+              <span>Verify OTP</span>
+            </button>
+
+            <button type="button" class="back-btn" id="backToSignupBtn">
+              Back to Sign Up
+            </button>
+
+            <div class="resend-otp">
+              Didn't receive a code?
+              <a id="resendOtpBtn">Resend OTP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
