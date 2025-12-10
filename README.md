@@ -191,3 +191,8 @@ To fine-tune the models on your own data:
 **This project is for EDUCATIONAL PURPOSES ONLY.**
 
 It is designed as a learning tool for software engineering. It is not intended for commercial use or production environments.
+
+## 📄 Project Report
+View the detailed report of the project here for better understanding:
+[View Project Report (PDF)](docs/PROJECT_REPORT_FOR_PRECISELY.pdf)
+
