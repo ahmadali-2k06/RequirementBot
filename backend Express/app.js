@@ -11,10 +11,8 @@ const errorHandler = require("./middlewares/errorHandler.js");
 
 //api routes
 const authRoute = require("./routes/api/auth");
-
 //views routes
 const loginRoute = require("./routes/views/login");
-
 //security packages import
 const helmet = require("helmet");
 const { xss } = require("express-xss-sanitizer");
@@ -36,7 +34,6 @@ app.set("view engine", "ejs");
 //static routes
 app.use("/", loginRoute);
 app.use("/login", loginRoute);
-
 //api routes
 // This allows your frontend fetch calls to work (e.g., /auth/register)
 app.use("/auth", authRoute); 

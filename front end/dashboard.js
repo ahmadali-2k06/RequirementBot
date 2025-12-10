@@ -223,10 +223,29 @@ async function switchProject(id) {
         projectData.scope.name || "Untitled Project";
 
       // Render Chat
-      renderChatHistory(messages || []);
+      const safeMessages = messages || [];
+      renderChatHistory(safeMessages);
 
-      // Render Sidebars (The Crucial Fix for Point 1 & 5)
+      // Render Sidebars
       renderRequirementsAndConstraints(requirements || [], projectData.scope);
+
+      // ============================================================
+      // 🚨 THE FIX: Check history to decide State
+      // ============================================================
+      const lastMsg =
+        safeMessages.length > 0 ? safeMessages[safeMessages.length - 1] : null;
+
+      // If the last message is from the bot and contains the "Session Ended" text (from the Final Report)
+      if (
+        lastMsg &&
+        lastMsg.sender === "bot" &&
+        lastMsg.text.includes("Session Ended")
+      ) {
+        disableChat();
+      } else {
+        enableChat();
+      }
+      // ============================================================
     }
   } catch (e) {
     currentProjectTitle.textContent = "Error Loading";
