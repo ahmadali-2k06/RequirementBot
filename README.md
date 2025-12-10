@@ -194,5 +194,5 @@ It is designed as a learning tool for software engineering. It is not intended f
 
 ## 📄 Project Report
 View the detailed report of the project here for better understanding:
-[View Project Report (PDF)](docs/PROJECT_REPORT_FOR_PRECISELY.pdf)
+[View Project Report (PDF)](docs/PROJECT%20REPORT%20FOR%20PRECISELY.pdf)
 
