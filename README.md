@@ -1,3 +1,7 @@
+Here is the updated `README.md` with the Hugging Face links included in the **Model Architecture** section, keeping everything else exactly as you requested.
+
+-----
+
 # Precisely (Requirement Bot) 🤖
 
 **Precisely** is an intelligent, AI-powered system designed to automate and guide the software requirement gathering process. It combines a Python-based AI core for deep language analysis with a Node.js/Express backend and a web dashboard to manage projects.
@@ -49,13 +53,13 @@ Precisely (Requirement Bot)/
 
 Precisely utilizes a suite of fine-tuned Transformer models to perform its analysis. The following specific architectures are used for each task:
 
-  * **Intent Classification:** `DistilDeBERTa`
+  * **Intent Classification:** `DistilDeBERTa` ([Download Model](https://huggingface.co/AhmadMilo/intent_classifier))
       * Identifies the user's underlying goal or intent when typing a requirement.
-  * **Ambiguity Detection:** `T5-Base`
+  * **Ambiguity Detection:** `T5-Base` ([Download Model](https://huggingface.co/AhmadMilo/Ambiguity_Detector))
       * A sequence-to-sequence model that rewrites vague requirements into clearer alternatives.
-  * **FR/NFR Classification:** `DeBERTa-v3-Base`
+  * **FR/NFR Classification:** `DeBERTa-v3-Base` ([Download Model](https://huggingface.co/AhmadMilo/Functional_Non-Functional_Classifier))
       * Distinguishes between Functional Requirements (FR) and Non-Functional Requirements (NFR).
-  * **Quality Attribute Prediction:** `DeBERTa-v3-Base`
+  * **Quality Attribute Prediction:** `DeBERTa-v3-Base` ([Download Model](https://huggingface.co/AhmadMilo/quality_attribute_classifier))
       * Categorizes NFRs into specific quality attributes (e.g., Security, Performance, Usability).
 
 > **⚠️ Note on Accuracy:** The accuracy of these models may not be optimal in all scenarios due to the limited size and variety of the current training datasets. They are intended for demonstration and educational purposes, and performance may vary on complex real-world data.
@@ -97,7 +101,7 @@ The Python core handles the intelligence and requirement processing.
     ```
 4.  **Setup ML Models:**
       * Create a folder named `models` in the root directory.
-      * Download the pre-trained models from the provided source.
+      * Download the pre-trained models from the provided source (links above).
       * Place them inside `models/` so the structure matches:
           * `models/intent_classifier/`
           * `models/ambiguity_detector/`
@@ -193,6 +197,6 @@ To fine-tune the models on your own data:
 It is designed as a learning tool for software engineering. It is not intended for commercial use or production environments.
 
 ## 📄 Project Report
-View the detailed report of the project here for better understanding:
-[View Project Report (PDF)](docs/PROJECT%20REPORT%20FOR%20PRECISELY.pdf)
 
+View the detailed report of the project here for better understanding:
+[View Project Report (PDF)](https://www.google.com/search?q=docs/PROJECT%2520REPORT%2520FOR%2520PRECISELY.pdf)
