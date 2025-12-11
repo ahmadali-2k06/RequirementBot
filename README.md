@@ -1,7 +1,3 @@
-Here is the updated `README.md` with the Hugging Face links included in the **Model Architecture** section, keeping everything else exactly as you requested.
-
------
-
 # Precisely (Requirement Bot) 🤖
 
 **Precisely** is an intelligent, AI-powered system designed to automate and guide the software requirement gathering process. It combines a Python-based AI core for deep language analysis with a Node.js/Express backend and a web dashboard to manage projects.
