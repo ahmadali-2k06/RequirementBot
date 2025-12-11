@@ -199,4 +199,4 @@ It is designed as a learning tool for software engineering. It is not intended f
 ## 📄 Project Report
 
 View the detailed report of the project here for better understanding:
-[View Project Report (PDF)](https://www.google.com/search?q=docs/PROJECT%2520REPORT%2520FOR%2520PRECISELY.pdf)
+[View Project Report (PDF)](docs/PROJECT%2520REPORT%2520FOR%2520PRECISELY.pdf)
